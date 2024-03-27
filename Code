@@ -1,0 +1,573 @@
+#include <stdio.h>
+#include <stdlib.h> 
+
+void displayRightHalfPyramid(int rows);
+void displayLeftHalfPyramid(int rows);
+void displayFullPyramid(int rows);
+void displayInvertedRightHalfPyramid(int rows);
+void displayInvertedLeftHalfPyramid(int rows);
+void displayInvertedFullPyramid(int rows);
+void displayRhombusPattern(int rows);
+void displayDiamondPattern(int rows);
+void displayHourglassPattern(int rows);
+void displayHollowSquarePattern(int rows);
+void displayHollowFullPyramid(int rows);
+void displayHollowInvertedFullPyramid(int rows);
+void displayHollowDiamondPyramid(int rows);
+void displayHollowHourglassPattern(int rows);
+void displayFloydsTriangle(int rows);
+void displayPascalsTriangle(int rows);
+void displayButterflyStarPattern(int rows);
+void displayNumberTriangular(int rows);
+void displaySquareFillPattern(int rows);
+
+
+int main() {
+    int choice, rows;
+    
+    do {
+        // Display menu
+        printf("\nChoose a pattern to display:\n");
+        printf("1. Right Half Pyramid\n");
+        printf("2. Left Half Pyramid\n");
+        printf("3. Full Pyramid\n");
+        printf("4. Inverted Right Half Pyramid\n");
+        printf("5. Inverted Left Half Pyramid\n");
+        printf("6. Inverted Full Pyramid\n");
+        printf("7. Rhombus Pattern\n");
+        printf("8. Diamond Pattern\n");
+        printf("9. Hourglass Pattern\n");
+        printf("10. Hollow Square Pattern\n");
+        printf("11. Hollow Full Pyramid\n");
+        printf("12. Hollow Inverted Full Pyramid\n");
+        printf("13. Hollow Diamond Pyramid\n");
+        printf("14. Hollow Hourglass Pattern\n");
+        printf("15. Floyd's Triangle\n");
+        printf("16. Pascal's Triangle\n");
+        printf("17. Butterfly Star Pattern\n");
+        printf("18. Number Triangular\n");
+        printf("19. Square Fill Pattern\n");
+        printf("0. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+
+       
+        switch (choice) {
+            case 0:
+                printf("Program Ends!\n");
+                break;
+            case 1:
+                printf("Enter the number of rows for Right Half Pyramid: ");
+                scanf("%d", &rows);
+                if (rows <= 0) {
+                    printf("Number of rows should be greater than 0.\n");
+                    break;
+                }
+                displayRightHalfPyramid(rows);
+                break;
+            case 2:
+                printf("Enter the number of rows for Left Half Pyramid: ");
+                scanf("%d", &rows);
+                if (rows <= 0) {
+                    printf("Number of rows should be greater than 0.\n");
+                    break;
+                }
+                displayLeftHalfPyramid(rows);
+                break;
+            case 3:
+                printf("Enter the number of rows for Full Pyramid: ");
+                scanf("%d", &rows);
+                if (rows <= 0) {
+                    printf("Number of rows should be greater than 0.\n");
+                    break;
+                }
+                displayFullPyramid(rows);
+                break;
+            case 4:
+                printf("Enter the number of rows for Inverted Right Half Pyramid: ");
+                scanf("%d", &rows);
+                if (rows <= 0) {
+                    printf("Number of rows should be greater than 0.\n");
+                    break;
+                }
+                displayInvertedRightHalfPyramid(rows);
+                break;
+            case 5:
+                printf("Enter the number of rows for Inverted Left Half Pyramid: ");
+                scanf("%d", &rows);
+                if (rows <= 0) {
+                    printf("Number of rows should be greater than 0.\n");
+                    break;
+                }
+                displayInvertedLeftHalfPyramid(rows);
+                break;
+            case 6:
+                printf("Enter the number of rows for Inverted Full Pyramid: ");
+                scanf("%d", &rows);
+                if (rows <= 0) {
+                    printf("Number of rows should be greater than 0.\n");
+                    break;
+                }
+                displayInvertedFullPyramid(rows);
+                break;
+            case 7:
+                printf("Enter the number of rows for Rhombus Pattern: ");
+                scanf("%d", &rows);
+                if (rows <= 0) {
+                    printf("Number of rows should be greater than 0.\n");
+                    break;
+                }
+                displayRhombusPattern(rows);
+                break;
+            case 8:
+                printf("Enter the number of rows for Diamond Pattern: ");
+                scanf("%d", &rows);
+                if (rows <= 0) {
+                    printf("Number of rows should be greater than 0.\n");
+                    break;
+                }
+                displayDiamondPattern(rows);
+                break;
+            case 9:
+                printf("Enter the number of rows for Hourglass Pattern: ");
+                scanf("%d", &rows);
+                if (rows <= 0) {
+                    printf("Number of rows should be greater than 0.\n");
+                    break;
+                }
+                displayHourglassPattern(rows);
+                break;
+            case 10:
+                printf("Enter the number of rows for Hollow Square Pattern: ");
+                scanf("%d", &rows);
+                if (rows <= 0) {
+                    printf("Number of rows should be greater than 0.\n");
+                    break;
+                }
+                displayHollowSquarePattern(rows);
+                break;
+            case 11:
+                printf("Enter the number of rows for Hollow Full Pyramid: ");
+                scanf("%d", &rows);
+                if (rows <= 0) {
+                    printf("Number of rows should be greater than 0.\n");
+                    break;
+                }
+                displayHollowFullPyramid(rows);
+                break;
+            case 12:
+                printf("Enter the number of rows for Hollow Inverted Full Pyramid: ");
+                scanf("%d", &rows);
+                if (rows <= 0) {
+                    printf("Number of rows should be greater than 0.\n");
+                    break;
+                }
+                displayHollowInvertedFullPyramid(rows);
+                break;
+            case 13:
+                printf("Enter the number of rows for Hollow Diamond Pyramid: ");
+                scanf("%d", &rows);
+                if (rows <= 0) {
+                    printf("Number of rows should be greater than 0.\n");
+                    break;
+                }
+                displayHollowDiamondPyramid(rows);
+                break;
+            case 14:
+                printf("Enter the number of rows for Hollow Hourglass Pattern: ");
+                scanf("%d", &rows);
+                if (rows <= 0) {
+                    printf("Number of rows should be greater than 0.\n");
+                    break;
+                }
+                displayHollowHourglassPattern(rows);
+                break;
+            case 15:
+                printf("Enter the number of rows for Floyd's Triangle: ");
+                scanf("%d", &rows);
+                if (rows <= 0) {
+                    printf("Number of rows should be greater than 0.\n");
+                    break;
+                }
+                displayFloydsTriangle(rows);
+                break;
+            case 16:
+                printf("Enter the number of rows for Pascal's Triangle: ");
+                scanf("%d", &rows);
+                if (rows <= 0) {
+                    printf("Number of rows should be greater than 0.\n");
+                    break;
+                }
+                displayPascalsTriangle(rows);
+                break;
+            case 17:
+                printf("Enter the number of rows for Butterfly Star Pattern: ");
+                scanf("%d", &rows);
+                if (rows <= 0) {
+                    printf("Number of rows should be greater than 0.\n");
+                    break;
+                }
+                displayButterflyStarPattern(rows);
+                break;
+            case 18:
+                printf("Enter the number of rows for Number Triangular: ");
+                scanf("%d", &rows);
+                if (rows <= 0) {
+                    printf("Number of rows should be greater than 0.\n");
+                    break;
+                }
+                displayNumberTriangular(rows);
+                break;
+            case 19:
+                printf("Enter the number of rows for Square Fill Pattern: ");
+                scanf("%d", &rows);
+                if (rows <= 0) {
+                    printf("Number of rows should be greater than 0.\n");
+                    break;
+                }
+                displaySquareFillPattern(rows);
+                break;
+            default:
+                printf("Invalid choice! Please enter a number between 0 and 19.\n");
+        }
+    } while (choice != 0);
+
+    return 0;
+}
+
+
+
+
+void displayRightHalfPyramid(int rows) {
+    printf("Right Half Pyramid with %d rows:\n", rows);
+    for (int i = 1; i <= rows; i++) {
+        for (int j = 1; j <= i; j++) {
+            printf("* ");
+        }
+        printf("\n");
+    }
+}
+
+void displayLeftHalfPyramid(int rows) {
+    printf("Left Half Pyramid with %d rows:\n", rows);
+    for (int i = 1; i <= rows; i++) {
+        for (int j = rows; j >= i; j--) {
+            printf("* ");
+        }
+        printf("\n");
+    }
+}
+
+void displayFullPyramid(int rows) {
+    printf("Full Pyramid with %d rows:\n", rows);
+    for (int i = 1; i <= rows; i++) {
+        // Print spaces
+        for (int j = 1; j <= rows - i; j++) {
+            printf(" ");
+        }
+        // Print stars
+        for (int k = 1; k <= 2 * i - 1; k++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+}
+
+void displayInvertedRightHalfPyramid(int rows) {
+    printf("Inverted Right Half Pyramid with %d rows:\n", rows);
+    for (int i = rows; i >= 1; i--) {
+        for (int j = 1; j <= i; j++) {
+            printf("* ");
+        }
+        printf("\n");
+    }
+}
+
+void displayInvertedLeftHalfPyramid(int rows) {
+    printf("Inverted Left Half Pyramid with %d rows:\n", rows);
+    for (int i = rows; i >= 1; i--) {
+        for (int j = rows; j >= i; j--) {
+            printf("* ");
+        }
+        printf("\n");
+    }
+}
+
+
+
+void displayInvertedFullPyramid(int rows) {
+    printf("Inverted Full Pyramid with %d rows:\n", rows);
+    for (int i = rows; i >= 1; i--) {
+        // Print spaces
+        for (int j = 1; j <= rows - i; j++) {
+            printf(" ");
+        }
+        // Print stars
+        for (int k = 1; k <= 2 * i - 1; k++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+}
+
+void displayRhombusPattern(int rows) {
+    printf("Rhombus Pattern with %d rows:\n", rows);
+    for (int i = 1; i <= rows; i++) {
+        // Print leading spaces
+        for (int j = 1; j <= rows - i; j++) {
+            printf(" ");
+        }
+        // Print stars
+        for (int k = 1; k <= rows; k++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+}
+
+void displayDiamondPattern(int rows) {
+    if (rows % 2 == 0) {
+        printf("Please enter an odd number of rows for the diamond pattern.\n");
+        return;
+    }
+
+    int mid = rows / 2 + 1;
+    for (int i = 1; i <= rows; i++) {
+        int spaces = abs(mid - i);
+        int stars = rows - 2 * spaces;
+        printf("%*s", spaces, "");
+        for (int j = 1; j <= stars; j++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+}
+
+void displayHourglassPattern(int rows) {
+    // Upper half of the hourglass
+    for (int i = 1; i <= rows; i++) {
+        // Print leading spaces
+        for (int j = 1; j < i; j++) {
+            printf(" ");
+        }
+        // Print stars
+        for (int k = 0; k < 2 * (rows - i) + 1; k++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+    // Lower half of the hourglass
+    for (int i = rows - 1; i >= 1; i--) {
+        // Print leading spaces
+        for (int j = 1; j < i; j++) {
+            printf(" ");
+        }
+        // Print stars
+        for (int k = 0; k < 2 * (rows - i) + 1; k++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+}
+
+
+void displayHollowSquarePattern(int rows) {
+    printf("Hollow Square Pattern with %d rows:\n", rows);
+    for (int i = 1; i <= rows; i++) {
+        if (i == 1 || i == rows) {
+            // Print full row of stars
+            for (int j = 1; j <= rows; j++) {
+                printf("* ");
+            }
+        } else {
+            // Print stars with spaces in between
+            printf("* ");
+            for (int j = 1; j <= rows - 2; j++) {
+                printf("  ");
+            }
+            printf("*");
+        }
+        printf("\n");
+    }
+}
+
+void displayHollowFullPyramid(int rows) {
+    printf("Hollow Full Pyramid with %d rows:\n", rows);
+    for (int i = 1; i <= rows; i++) {
+        // Print leading spaces
+        for (int j = 1; j <= rows - i; j++) {
+            printf(" ");
+        }
+        // Print stars
+        for (int k = 1; k <= 2 * i - 1; k++) {
+            if (k == 1 || k == 2 * i - 1 || i == rows)
+                printf("*");
+            else
+                printf(" ");
+        }
+        printf("\n");
+    }
+}
+
+void displayHollowInvertedFullPyramid(int rows) {
+    printf("Hollow Inverted Full Pyramid with %d rows:\n", rows);
+    for (int i = rows; i >= 1; i--) {
+        // Print leading spaces
+        for (int j = 1; j <= rows - i; j++) {
+            printf(" ");
+        }
+        // Print stars
+        for (int k = 1; k <= 2 * i - 1; k++) {
+            if (k == 1 || k == 2 * i - 1 || i == rows)
+                printf("*");
+            else
+                printf(" ");
+        }
+        printf("\n");
+    }
+}
+
+void displayHollowDiamondPyramid(int rows) {
+    if (rows % 2 == 0) {
+        printf("Please enter an odd number of rows for the diamond pattern.\n");
+        return;
+    }
+
+    int mid = rows / 2 + 1;
+
+    // Upper half of the diamond
+    for (int i = 1; i <= mid; i++) {
+        int spaces = mid - i;
+        int stars = 2 * i - 1;
+        printf("%*s", spaces, "");
+        if (i == 1) {
+            printf("*\n");
+        } else {
+            printf("*%*s*\n", stars - 2, "");
+        }
+    }
+
+    // Lower half of the diamond
+    for (int i = mid - 1; i >= 1; i--) {
+        int spaces = mid - i;
+        int stars = 2 * i - 1;
+        printf("%*s", spaces, "");
+        if (i == 1) {
+            printf("*\n");
+        } else {
+            printf("*%*s*\n", stars - 2, "");
+        }
+    }
+}
+
+
+void displayHollowHourglassPattern(int rows) {
+    if (rows <= 0 || rows % 2 == 0) {
+        printf("Please enter a positive odd number of rows for the pattern.\n");
+        return;
+    }
+
+    int spaces = 0;
+
+    // Upper half of the hourglass
+    for (int i = 1; i <= rows; i++) {
+        for (int j = 1; j <= spaces; j++)
+            printf(" ");
+        
+        for (int j = 1; j <= rows - 2 * spaces; j++) {
+            if (j == 1 || j == rows - 2 * spaces)
+                printf("*");
+            else
+                printf(" ");
+        }
+
+        printf("\n");
+        
+        if (i <= rows / 2)
+            spaces++;
+        else
+            spaces--;
+    }
+}
+
+void displayFloydsTriangle(int rows) {
+    printf("Floyd's Triangle with %d rows:\n", rows);
+    int count = 1;
+    for (int i = 1; i <= rows; i++) {
+        for (int j = 1; j <= i; j++) {
+            printf("%d ", count);
+            count++;
+        }
+        printf("\n");
+    }
+}
+
+void displayPascalsTriangle(int rows) {
+    printf("Pascal's Triangle with %d rows:\n", rows);
+    int coef = 1;
+    for (int i = 0; i < rows; i++) {
+        for (int space = 1; space <= rows - i; space++)
+            printf(" ");
+        for (int j = 0; j <= i; j++) {
+            if (j == 0 || i == 0)
+                coef = 1;
+            else
+                coef = coef * (i - j + 1) / j;
+            printf("%4d", coef);
+        }
+        printf("\n");
+    }
+}
+
+void displayButterflyStarPattern(int rows) {
+    printf("Butterfly Star Pattern with %d rows:\n", rows);
+    for (int i = 1; i <= rows; i++) {
+        for (int j = 1; j <= i; j++) {
+            printf("* ");
+        }
+        int space = 2 * (rows - i);
+        for (int j = 1; j <= space; j++) {
+            printf("  ");
+        }
+        for (int j = 1; j <= i; j++) {
+            printf("* ");
+        }
+        printf("\n");
+    }
+    for (int i = rows; i >= 1; i--) {
+        for (int j = 1; j <= i; j++) {
+            printf("* ");
+        }
+        int space = 2 * (rows - i);
+        for (int j = 1; j <= space; j++) {
+            printf("  ");
+        }
+        for (int j = 1; j <= i; j++) {
+            printf("* ");
+        }
+        printf("\n");
+    }
+}
+
+void displayNumberTriangular(int rows) {
+    printf("Number Triangular with %d rows:\n", rows);
+    int num = 1;
+    for (int i = 1; i <= rows; i++) {
+        for (int j = 1; j <= i; j++) {
+            printf("%d ", num);
+            num++;
+        }
+        printf("\n");
+    }
+}
+
+void displaySquareFillPattern(int rows) {
+    printf("Square Fill Pattern with %d rows:\n", rows);
+    for (int i = 1; i <= rows; i++) {
+        for (int j = 1; j <= rows; j++) {
+            printf("%d ", i);
+        }
+        printf("\n");
+    }
+}
+
